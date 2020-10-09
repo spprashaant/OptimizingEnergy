@@ -12,7 +12,7 @@ const ChoiceButton =({name, onPress,disabledValue,  stylename})=>{
 
 const styles= StyleSheet.create({
     choiceButton:{
-        margin:5,
+        margin:3,
         borderRadius:20,
         padding:10,
         backgroundColor:"black"
