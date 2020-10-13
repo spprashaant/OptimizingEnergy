@@ -19,11 +19,12 @@
     "ios": {
       "supportsTablet": true
     },
+    "android": {
+      "package": "com.shreeyam.oe",
+      "versionCode": 1
+    },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "android": {
-      "package": "com.spprashaant.optimizingenergy"
     }
   }
 }

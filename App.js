@@ -9,18 +9,18 @@ import ChoiceButton from './components/ChoiceButton'
 
 
 const Audiofiles={
-  day1: require('./assets/stage-1.m4a'),
-  day2: require('./assets/stage-2.m4a'),
-  day3: require('./assets/stage-3.m4a'),
-  day4: require('./assets/stage-4.m4a'),
-  day5: require('./assets/stage-5.m4a'),
-  day6: require('./assets/stage-6.m4a'),
-  day7: require('./assets/stage-7.m4a'),
-  day8: require('./assets/stage-8.m4a'),
-  day9: require('./assets/stage-9.m4a'),
-  day10: require('./assets/stage-10.m4a'),
-  day11: require('./assets/stage-11.m4a'),
-  day12: require('./assets/stage-12.m4a'),
+  day1: require('./assets/stage-1.mp3'),
+  day2: require('./assets/stage-2.mp3'),
+  day3: require('./assets/stage-3.mp3'),
+  day4: require('./assets/stage-4.mp3'),
+  day5: require('./assets/stage-5.mp3'),
+  day6: require('./assets/stage-6.mp3'),
+  day7: require('./assets/stage-7.mp3'),
+  day8: require('./assets/stage-8.mp3'),
+  day9: require('./assets/stage-9.mp3'),
+  day10: require('./assets/stage-10.mp3'),
+  day11: require('./assets/stage-11.mp3'),
+  day12: require('./assets/stage-12.mp3'),
 }
 
 const currentlyPlaying = new Audio.Sound();
@@ -72,7 +72,6 @@ export default function App() {
 
   const stopPlayback = async () => {
     if(currentlyPlaying){
-      console.log("stop clicked")
       await currentlyPlaying.stopAsync();
       await currentlyPlaying.unloadAsync();
       setNumberOfItemsPlayed(0);
@@ -133,14 +132,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-around',
     margin:16,
+    flex: 1
   },
   choicesSection: {
-    marginTop: 16,
     flexDirection:"row", 
-    flexWrap:"wrap"
+    flexWrap:"wrap",
+    paddingLeft: 20
   },
   title:{
-    fontSize:14,
+    fontSize:21,
     fontWeight:"bold",
     paddingLeft:5,
     paddingTop:10

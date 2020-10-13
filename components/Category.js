@@ -36,12 +36,14 @@ const Category = ({
             size={40}
             color={"black"}
             onPress={handlePlayClicked}
+            style={styles.playButton}
           />
           <EIcon
             name={"controller-stop"}
             size={40}
             color={"black"}
             onPress={handleStopClicked}
+            style={styles.stopButton}
           />
         </View>
       </View>
@@ -57,14 +59,16 @@ const styles = StyleSheet.create({
   },
   parent2: {
     justifyContent: "space-around",
-    flexDirection: "row"
+    flexDirection: "column",
+    alignItems: "flex-end"
   },
   choiceParent: {
     flexDirection: "row",
   },
   choiceList: {
     flexDirection: "row",
-    minWidth: 250,
+    justifyContent: "flex-start",
+    alignSelf: "center"
   },
   choiceParent2: {
     flexDirection: "row",
@@ -98,5 +102,13 @@ const styles = StyleSheet.create({
     paddingRight: 8,
     borderRadius: 5,
   },
+  playButton: {
+    marginRight: 20,
+    marginTop: 10
+    },
+  stopButton: {
+    marginRight: 20,
+    marginTop: 10
+  }
 });
 export default Category;

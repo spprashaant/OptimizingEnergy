@@ -15,6 +15,7 @@ const styles= StyleSheet.create({
         margin:3,
         borderRadius:20,
         padding:10,
+        width: 80,
         backgroundColor:"black"
     },
     choiceButtonInvalid:{
