@@ -5,8 +5,7 @@ import {Audio} from 'expo-av'
 import Stages from './components/stages'
 import Category from './components/Category'
 import ChoiceButton from './components/ChoiceButton'
-
-
+import { activateKeepAwake, deactivateKeepAwake } from 'expo-keep-awake';
 
 const Audiofiles={
   day1: require('./assets/stage-1.mp3'),
@@ -66,11 +65,13 @@ export default function App() {
       
     }
     else{
+      deactivateKeepAwake();
       await currentlyPlaying.unloadAsync();
     }
   }
 
   const stopPlayback = async () => {
+    deactivateKeepAwake();
     if(currentlyPlaying){
       await currentlyPlaying.stopAsync();
       await currentlyPlaying.unloadAsync();
@@ -79,6 +80,7 @@ export default function App() {
   }
 
   const playAudio = startingIndex =>{
+    activateKeepAwake();
     setNumberOfItemsPlayed(0);
     setCurrentPlayingIndex(startingIndex);
   }
